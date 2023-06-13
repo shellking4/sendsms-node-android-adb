@@ -29,7 +29,7 @@ If the script ran successfully then you can use it in your nodejs program.
 
 An example is provided in the sendsms.js
 
-Using this method you can send sms without limit using an Android phone connected to your API server for example. The example assumes your deployed your server on premises. In the cloud your probably need something like twilio. 
+Using this method you can send sms without limit using an Android phone connected to your API server for example. The example assumes you deployed your server on premises. In the cloud, you ain't got no chance :)( .... You probably need something like twilio. 
 
 Thanks ! Improve the script if needs be.
 
