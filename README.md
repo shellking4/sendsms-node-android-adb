@@ -33,6 +33,8 @@ Using this method you can send sms without limit using an Android phone connecte
 
 Thanks ! Improve the script if needs be.
 
+# PS: THE SCRIPT HAS BEEEN SUCCESSFULLY TESTED AND WORKED GREAT USING A TECHNO SPARK 8P...DON'T KNOW YET ABOUT OTHER DEVICES. 
+
 # References
 
 https://stackoverflow.com/questions/18924968/using-adb-to-access-a-particular-ui-control-on-the-screen
