@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+
+while getopts n:b: flag
+do
+    case "${flag}" in
+        n) phone_number=${OPTARG};;
+        b) body=${OPTARG};;
+    esac
+done
+
+echo $phone_number $body
+
+adb shell am start -a android.intent.action.SENDTO -d sms:$phone_number --es sms_body $body --ez exit_on_sent true --eu simSlot 2
+
+adb pull $(adb shell uiautomator dump | grep -oP '[^ ]+.xml') /tmp/view.xml
+
+sms_send_btn_coords=$(perl -ne 'printf "%d %d\n", ($1+$3)/2, ($2+$4)/2 if /content-desc="Send SMS"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/' /tmp/view.xml)
+
+echo $sms_send_btn_coords
+
+adb shell input tap $sms_send_btn_coords
