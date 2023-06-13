@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 while getopts n:b: flag
 do
     case "${flag}" in
