@@ -18,7 +18,7 @@ make sure the phone is connected by doing
 
 5- Test the sendsms script with the following: 
 ```bash 
-    sendsms -n 62798845 -b "Test message"
+    sendsms -n <some number> -b "Test message"
 ```
  - the -n flag stands for number or phone number (the phone number you want to send the message to)
  - the -b flag stands for body of message (the body or actual content of the message you want to send)
