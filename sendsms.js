@@ -8,7 +8,7 @@ var escapedStr = message.replace(regex, "\\$&");
 
 const command = 'sendsms';
 const args = [
-  '-n', '62798845',
+  '-n', '123456789',
   '-b', escapedStr
 ];
 
