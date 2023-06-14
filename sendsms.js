@@ -14,3 +14,16 @@ const args = [
 
 const sendsms = spawn(command, args);
 
+// Event listeners for stdout and stderr
+sendsms.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
+sendsms.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+// Event listener for process exit
+sendsms.on('exit', (code) => {
+  console.log(`child process exited with code ${code}`);
+});
