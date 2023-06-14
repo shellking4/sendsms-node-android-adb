@@ -14,7 +14,3 @@ const args = [
 
 const sendsms = spawn(command, args);
 
-sendsms.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
-});
-
