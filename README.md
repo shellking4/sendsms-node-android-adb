@@ -14,7 +14,7 @@ make sure the phone is connected by doing
 
 3- Change the permissions of ./sendsms bash script to make it executable
 
-4- Put it somewhere global on the Operating System
+4- Put it somewhere global on the Operating System (say /usr/local/bin)
 
 5- Test the sendsms script with the following: 
 ```bash 

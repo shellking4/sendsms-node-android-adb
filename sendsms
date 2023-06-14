@@ -10,7 +10,7 @@ done
 
 echo $phone_number $body
 
-adb shell am start -a android.intent.action.SENDTO -d sms:$phone_number --es sms_body $body --ez exit_on_sent true --eu simSlot 2
+adb shell am start -a android.intent.action.SENDTO -d sms:$phone_number --es sms_body $body
 
 adb pull $(adb shell uiautomator dump | grep -oP '[^ ]+.xml') /tmp/view.xml
 
@@ -19,3 +19,5 @@ sms_send_btn_coords=$(perl -ne 'printf "%d %d\n", ($1+$3)/2, ($2+$4)/2 if /conte
 echo $sms_send_btn_coords
 
 adb shell input tap $sms_send_btn_coords
+
+adb shell am force-stop com.google.android.apps.messaging
