@@ -10,7 +10,7 @@ done
 
 echo $phone_number $body
 
-adb shell input keyevent 26
+adb shell input keyevent KEYCODE_WAKEUP
 
 adb shell am start -a android.intent.action.SENDTO -d sms:$phone_number --es sms_body $body
 
