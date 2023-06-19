@@ -10,6 +10,8 @@ done
 
 echo $phone_number $body
 
+adb shell input keyevent 26
+
 adb shell am start -a android.intent.action.SENDTO -d sms:$phone_number --es sms_body $body
 
 adb pull $(adb shell uiautomator dump | grep -oP '[^ ]+.xml') /tmp/view.xml
