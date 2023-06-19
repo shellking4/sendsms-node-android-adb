@@ -4,6 +4,7 @@ let regex = /[.*+?^${}()|[\]\\' ]/g;
 
 let message = "My friend's tongue says:  I love you !!!!!+++++"
 
+// necessay because the special characters in the message string must escaped
 var escapedStr = message.replace(regex, "\\$&"); 
 
 const command = 'sendsms';
